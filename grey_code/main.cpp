@@ -13,7 +13,7 @@ vector<string> greyCode(int x){
         mainArr.push_back("0"+greyCodeArr[i]);
 
     }
-    for(int i=greyCodeArr.size()-1;i>0;i--){
+    for(int i=greyCodeArr.size()-1;i>=0;i--){
         mainArr.push_back("1"+greyCodeArr[i]);
     }
 
