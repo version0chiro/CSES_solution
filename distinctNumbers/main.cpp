@@ -8,17 +8,12 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-    int arr[n];
+    set<int> s;
     Loop(n){
-        cin >> arr[i];
+        int p;
+        cin >> p;
+        s.insert(p);
     }
-    sort(arr,arr+n);
-    int count = 0;
-    Loop(n){
-        if(arr[i]!=arr[i+1]){
-            count++;
-        }
-    }
-    cout <<"\n"<<count;
-    return 0;
+    cout << s.size() << endl;
+   return 0;
 }
