@@ -22,8 +22,9 @@ int main(){
     while(n>0){
         cout<<"========================="<<endl;
         cout<<"Differnece between "<< weight[n]<<" "<<weight[n-1]<<endl;
-        cout<<"is=="<<abs(weight[n]-weight[n-1])<<endl;
-        if(abs(weight[n]+weight[n-1])<x){
+        cout<<"is=="<<abs(weight[n]+weight[n-1])<<"should be less than"<<x<<endl;
+        if(abs(weight[n]+weight[n-1])<=x){
+            cout<<endl<<"going here";
             count++;
             n=n-2;
         }else{
