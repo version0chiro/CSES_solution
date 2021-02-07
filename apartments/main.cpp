@@ -18,23 +18,22 @@ int main(){
         cin >>t;
         app.push_back(t);
     }
-    sort(app.begin(),app.end());
     sort(apr.begin(),apr.end());
-    while(papr<n && papp<m){
-        cout<<"=====";
-        cout <<"The comparision is between "<<apr[papr]<<" and  "<<app[papp]<<"\n";
+    sort(app.begin(),app.end());
+    while(papp<m && papr<n){
         if(abs(apr[papr]-app[papp])<=k){
             working++;
-            papr++;
             papp++;
-        }else if(apr[papr]<app[papp]-k){
+            papr++;
+        }
+        else if(apr[papr]<app[papp]){
             papr++;
         }
         else{
             papp++;
         }
-
     }
-    cout<<working;
+
+    cout <<working;
    return 0;
 }
